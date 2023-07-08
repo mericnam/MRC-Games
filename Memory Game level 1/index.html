@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <!-- css  -->
+    <link rel="stylesheet" href="./index.css">
+    <!-- js  -->
+    <script defer src="./cards.js"></script>
+    <script defer src="./index.js"></script>
+</head>
+<body>
+     
+    <h1 style="text-align: center; font-size: 32px; margin-top: 10px;"> <span style="color: red;">MRC</span> Memory Game</h1>
+
+    <div class="choseContainer">
+                
+        <label for="size">Choose size :</label>
+            <select id="size">
+                <option value="8">8</option>
+                <option value="12">12</option>
+                <option value="16">16</option>
+                <option value="20">20</option>
+            </select>
+
+        <button onclick="start()">Start</button>
+
+        <p> Your score is: <span id="result"></span></p>
+
+    </div>
+
+
+
+
+    <div id="gameContainer" class="gameContainer">
+
+     </div>
+   
+</body>
+</html>

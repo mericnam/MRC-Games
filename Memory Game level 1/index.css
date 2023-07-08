@@ -1,0 +1,76 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-color: beige;
+}
+.choseContainer{
+    position: relative;
+    padding-top: 15px;
+    margin-top: 30px;
+
+    width: 500px;
+    height: 80px;
+    border: 1px solid gray;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
+    align-items: center;
+}
+.choseContainer button{
+    width: 100px;
+    height: 40px;
+    background-color: gray;
+    border: 1px solid gray;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.gameContainer{
+    position: relative;
+
+    width: 650px;
+    height: 650px;
+    border: 1px solid gray;
+
+    margin-top: 10rem;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gameContainer div{
+    display: flex;
+    width: 90px;
+    height: 160px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.backSide{
+    background-image: url(./img/blank.png)!important;
+}
+.trying{
+
+}
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
