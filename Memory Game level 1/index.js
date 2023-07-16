@@ -1,6 +1,10 @@
 const gameContainer = document.getElementById("gameContainer")
+let score = document.getElementById("score")
+let scoreNumber;
 
 function start(){
+  scoreNumber=0;
+  score.innerHTML= scoreNumber;
   gameContainer.innerHTML=""
   const sizeIndex = document.getElementById("size");
   const size = sizeIndex.options[sizeIndex.selectedIndex].text;
@@ -23,28 +27,30 @@ function start(){
 }
 
 function cardClicked(){
-  turn(this)
   let tryings = document.getElementsByClassName("trying");
 
+  if(tryings.length<2){
+    turn(this)
+  }
+
   if(tryings.length==2){
-    console.log("its two now")
     waitHalfSecond().then(() => {
       compare(tryings[0],tryings[1])
     });
-  }else{
-    console.log("not yet")
   }
 }
 function compare(first, second){
-  console.log("trying now")
-
   if(first.id===second.id){
+    scoreNumber += 10
+    score.innerHTML= scoreNumber;
     first.classList.toggle("trying")
     second.classList.toggle("trying")
     first.classList.add("disabled")
     second.classList.add("disabled")
 
   }else{
+    scoreNumber -= 5
+    score.innerHTML= scoreNumber;
     first.classList.toggle("trying")
     second.classList.toggle("trying")
     first.classList.toggle("backSide")
@@ -71,9 +77,8 @@ function createBoard(numList) {
     let selectedCard = cardArray.find(function(card) {
       return card.id === x;
     });
-    console.log(numList[x])
     card.style.backgroundImage = `url(${selectedCard.img})`;
-    card.setAttribute('id', cardArray[x].id)
+    card.setAttribute('id', cardArray[x-1].id)
 
     card.classList.toggle("backSide")
     gameContainer.appendChild(card)
@@ -115,7 +120,7 @@ function shuffleArrayTwo(array) {
 function randomPicker(randomSize){
   var numbers = [];
   while (numbers.length < randomSize) {
-    let randomNumber = Math.floor((Math.random() * 20)+1);
+    let randomNumber = Math.ceil((Math.random() * 20));
 
     if (!numbers.includes(randomNumber)) {
       numbers.push(randomNumber);
