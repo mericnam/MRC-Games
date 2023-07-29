@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack A Mole</title>
+    <!-- css  -->
+    <link rel="stylesheet" href="./whack.css">
+    <!-- js  -->
+    <script defer src="./whack.js"></script>
+</head>
+<body>
+     
+    <h1 style="text-align: center; font-size: 32px; margin-top: 10px;"> <a href="../index.html" style="color: red;">MRC</a> Whack A Mole</h1>
+
+    <div class="choseContainer">
+                
+        <label for="difficulty">Select your difficulty</label>
+            <select id="difficulty">
+                <option value="easy">easy</option>
+                <option value="normal">normal</option>
+                <option value="hard">hard</option>
+            </select>
+
+
+        <button onclick="startWhack()">Start</button>
+
+        <p> Time remaining: <span id="time"></span></p>
+        <p> Your score is: <span id="score"></span></p>
+
+    </div>
+
+
+
+
+    <div id="gameContainer" class="gameContainer">
+
+     </div>
+   
+</body>
+</html>
