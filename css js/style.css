@@ -54,7 +54,6 @@ header h1{
     background-color:rgb(93, 18, 18) ;
     font-family: var(--content-font);
 
-
 }
 .navContainer{
     font-size: 30px;
@@ -78,13 +77,16 @@ header h1{
     aspect-ratio: 1;
 }
 .listContainer{
-    min-height: 200vh;
+    min-height: 100vh;
         
     width: 80%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
 
+    justify-content: center;
+    text-align: center;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
 }

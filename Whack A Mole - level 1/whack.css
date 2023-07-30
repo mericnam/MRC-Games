@@ -80,6 +80,10 @@ body{
   opacity: 0.5;
   pointer-events: none;
 }
+.disabledGame {
+  opacity: 0.4;
+  pointer-events: none;
+}
 
 .item{
     opacity: 1;
@@ -95,3 +99,4 @@ body{
 .afterMole{
     background-image: url(./img/after.png)!important;
 }
+
